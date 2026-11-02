@@ -20,11 +20,11 @@ def platform_sign_out() -> str:
 
     Returns:
         str: ``unset CANVAS_PLATFORM_TOKEN`` under a service account token, which ``canvas
-            logout`` leaves in force, and ``sign out with canvas logout`` otherwise.
+            logout`` leaves in force, and "sign out with `canvas logout`" otherwise.
     """
     if auth.service_token() is not None:
         return f"unset {auth.SERVICE_TOKEN_ENV}"
-    return "sign out with canvas logout"
+    return "sign out with `canvas logout`"
 
 
 def refuse_unmanaged(cause: str, target: str) -> click.ClickException:

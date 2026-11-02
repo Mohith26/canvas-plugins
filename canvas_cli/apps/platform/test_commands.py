@@ -1519,7 +1519,7 @@ def test_config_set_on_an_unmanaged_plugin_is_refused_while_signed_in(
 
     assert result.exit_code == 1
     assert f"Canvas Platform does not manage {NAME}." in result.output
-    assert "sign out with canvas logout" in result.output
+    assert "sign out with `canvas logout`" in result.output
     mock_update.assert_not_called()
 
 

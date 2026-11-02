@@ -167,7 +167,7 @@ def test_managed_instance_refuses_what_platform_does_not_manage(
         managed_instance(host, "list")
 
     assert cause in raised.value.message
-    assert "sign out with canvas logout" in raised.value.message
+    assert "sign out with `canvas logout`" in raised.value.message
 
 
 def test_managed_instance_refusal_under_service_token_names_the_variable(
@@ -312,7 +312,7 @@ def test_instance_command_refuses_an_unmanaged_instance_while_signed_in(
 
     assert result.exit_code == 1
     assert "Canvas Platform does not manage legacy." in result.stderr
-    assert "sign out with canvas logout" in result.stderr
+    assert "sign out with `canvas logout`" in result.stderr
     ini_token.assert_not_called()
     assert not _calls(requests_mock, "GET", "https://legacy.canvasmedical.com")
 
@@ -865,7 +865,7 @@ def test_plugin_command_refuses_an_unmanaged_plugin_on_an_instance_while_signed_
 
     assert result.exit_code == 1
     assert f"Canvas Platform does not manage {name}." in result.stderr
-    assert "sign out with canvas logout" in result.stderr
+    assert "sign out with `canvas logout`" in result.stderr
     mock.assert_not_called()
 
 
