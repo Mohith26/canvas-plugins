@@ -142,7 +142,7 @@ def list_namespaces(
     if not host:
         raise typer.BadParameter("Please specify a host or add one to the configuration file")
 
-    if (managed := managed_instance(host)) is not None:
+    if (managed := managed_instance(host, "namespace list")) is not None:
         client, slug = managed
         try:
             listing = client.namespaces(slug)
@@ -189,7 +189,7 @@ def inspect(
     if not host:
         raise typer.BadParameter("Please specify a host or add one to the configuration file")
 
-    if (managed := managed_instance(host)) is not None:
+    if (managed := managed_instance(host, "namespace inspect")) is not None:
         client, slug = managed
         _print_inspection(_through_platform(namespace, lambda: client.namespace(slug, namespace)))
         return
@@ -250,7 +250,7 @@ def reset(
     if not host:
         raise typer.BadParameter("Please specify a host or add one to the configuration file")
 
-    if (managed := managed_instance(host)) is not None:
+    if (managed := managed_instance(host, "namespace reset")) is not None:
         client, slug = managed
         _platform_action(
             namespace,
@@ -364,7 +364,7 @@ def drop(
     if not host:
         raise typer.BadParameter("Please specify a host or add one to the configuration file")
 
-    if (managed := managed_instance(host)) is not None:
+    if (managed := managed_instance(host, "namespace drop")) is not None:
         client, slug = managed
         _platform_action(
             namespace,
