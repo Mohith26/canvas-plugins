@@ -197,6 +197,7 @@ from .payment_collection import PaymentCollection
 from .payor_specific_charge import PayorSpecificCharge
 from .plan import Plan
 from .plugin_command import PluginCommand
+from .portal_access_grant import PortalAccessGrant
 from .posting import (
     BasePosting,
     BaseRemittanceAdvice,
@@ -487,6 +488,7 @@ __all__ = __exports__ = (
     "PaymentCollection",
     "Plan",
     "PluginCommand",
+    "PortalAccessGrant",
     "PracticeLocation",
     "PracticeLocationAddress",
     "PracticeLocationContactPoint",

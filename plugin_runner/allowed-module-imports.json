@@ -1393,6 +1393,7 @@
     "PayorSpecificCharge",
     "Plan",
     "PluginCommand",
+    "PortalAccessGrant",
     "PracticeLocation",
     "PracticeLocationAddress",
     "PracticeLocationContactPoint",
@@ -1893,6 +1894,9 @@
   ],
   "canvas_sdk.v1.data.plugin_command": [
     "PluginCommand"
+  ],
+  "canvas_sdk.v1.data.portal_access_grant": [
+    "PortalAccessGrant"
   ],
   "canvas_sdk.v1.data.posting": [
     "BasePosting",

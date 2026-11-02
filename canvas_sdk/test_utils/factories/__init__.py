@@ -123,6 +123,7 @@ from .payment_card import PaymentCardFactory
 from .payment_collection import PaymentCollectionFactory
 from .plan import PlanFactory
 from .plugin_command import PluginCommandFactory
+from .portal_access_grant import PortalAccessGrantFactory
 from .practicelocation import (
     PracticeLocationAddressFactory,
     PracticeLocationContactPointFactory,
@@ -288,6 +289,7 @@ __all__ = (
     "PatientPhotoFactory",
     "PlanFactory",
     "PluginCommandFactory",
+    "PortalAccessGrantFactory",
     "PracticeLocationFactory",
     "PracticeLocationAddressFactory",
     "PracticeLocationContactPointFactory",
