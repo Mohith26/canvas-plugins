@@ -1026,8 +1026,9 @@ def _managed(
 
     Signed in, a plugin that answers ``GET /api/v1/plugins/<name>`` goes through platform.
     Any other plugin is refused with the way to sign out, unless no target is a Canvas
-    instance (localhost or another host), which platform can never manage, so platform is
-    not asked. Signed out, or for those hosts, the answer is None: the caller uses
+    instance (localhost or another host), which platform can never manage. Platform is not
+    asked when ``--instance`` or ``--host`` names only such hosts; with neither, it is asked
+    first. Signed out, or for those hosts, the answer is None: the caller uses
     credentials.ini, and the deprecation notice for ``command`` is printed.
 
     Args:
