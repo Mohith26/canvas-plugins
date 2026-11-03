@@ -1394,6 +1394,7 @@
     "Plan",
     "PluginCommand",
     "PortalAccessGrant",
+    "PortalAccessLevel",
     "PracticeLocation",
     "PracticeLocationAddress",
     "PracticeLocationContactPoint",
@@ -1896,7 +1897,8 @@
     "PluginCommand"
   ],
   "canvas_sdk.v1.data.portal_access_grant": [
-    "PortalAccessGrant"
+    "PortalAccessGrant",
+    "PortalAccessLevel"
   ],
   "canvas_sdk.v1.data.posting": [
     "BasePosting",
